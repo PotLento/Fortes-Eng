@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitações Rejeitadas - Painel do Encarregado</title>
+    <link rel="stylesheet" href="style-encarregado.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="panel-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h1>FORTES ENGENHARIA</h1>
+            </div>
+            
+            <a href="encarregado-criar-1.html" class="create-btn">+ CRIAR NOVA SOLICITAÇÃO</a>
+            
+            <nav class="sidebar-nav-manager">
+                <a href="encarregado-pendentes.html" class="nav-pending"> 
+                    <span>Solicitações Pendentes</span>
+                    <span class="count">[34]</span>
+                </a>
+                <a href="encarregado-aprovados.html" class="nav-approved"> 
+                    <span>Aprovadas no Mês</span>
+                    <span class="count">[15]</span>
+                </a>
+                <a href="encarregado-rejeitadas.html" class="nav-rejected active"> 
+                    <span>Rejeitadas</span>
+                    <span class="count">[1]</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <p>Olá, Encarregado (nome_encarregado)</p>
+                <a href="login-encarregado.html" class="logout-btn">Sair</a>
+            </header>
+
+            <section class="request-list">
+                <h2>Solicitações Rejeitadas</h2>
+
+                <table class="requests-table">
+                    <thead>
+                        <tr>
+                            <th>Data Rejeição</th> 
+                            <th>Técnico(s)</th>
+                            <th>Data / Hora Extra</th>
+                            <th>Motivo (Rejeição)</th> 
+                            <th>Ações</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10/10/2025</td> 
+                            <td>Nome_Tecnico G</td>
+                            <td>15/11/2025 - 08:00 às 10:00</td>
+                            <td>Solicitação duplicada / Fora do prazo</td> <td>
+                                <a href="#" class="action-btn details">Detalhes</a> 
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>05/10/2025</td> 
+                            <td>Nome_Tecnico H</td>
+                            <td>10/11/2025 - 14:00 às 16:00</td>
+                            <td>Justificativa insuficiente</td> <td>
+                                <a href="#" class="action-btn details">Detalhes</a> 
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

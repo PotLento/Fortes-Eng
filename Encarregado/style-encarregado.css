@@ -1,0 +1,509 @@
+/* --- ESTILOS PARA TODAS AS PÁGINAS DO ENCARREGADO --- */
+
+/* --- ESTILOS GERAIS DO PAINEL --- */
+/* (Esta parte é 99% igual ao painel.css, para manter a consistência) */
+body {
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff; 
+}
+.panel-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- ESTILOS DA BARRA LATERAL (Sidebar) --- */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-logo {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sidebar-logo h1 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    margin: 0;
+}
+
+/* --- ESTILOS DO CONTEÚDO PRINCIPAL (Main Content) --- */
+/* (Esta parte também é igual ao painel.css) */
+.main-content {
+    flex-grow: 1; 
+    padding: 30px;
+    background-color: #fff;
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.logout-btn {
+    text-decoration: none;
+    color: #d9534f; /* Vermelho para "Sair" */
+    font-weight: bold;
+    border: 1px solid #d9534f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.logout-btn:hover {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+/* --- NOVOS ESTILOS - NAVEGAÇÃO DO ENCARREGADO --- */
+
+/* Botão "+ Criar Nova Solicitação" */
+.create-btn {
+    display: block;
+    background-color: #007bff; /* Azul */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 25px;
+    transition: background-color 0.3s;
+}
+.create-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo base para os links de navegação */
+.sidebar-nav-manager a {
+    display: flex;
+    justify-content: space-between; /* Coloca o texto de um lado e o contador do outro */
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.sidebar-nav-manager .count {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Cores específicas baseadas no wireframe */
+
+/* Pendentes (Amarelo) */
+.nav-pending {
+    background-color: #fff; /* Fundo branco por padrão */
+    border-color: #ffc107;
+}
+.nav-pending.active {
+    background-color: #ffc107; /* Fica amarelo quando ativo */
+    color: #000;
+}
+
+/* Aprovadas (Verde) */
+.nav-approved {
+    background-color: #fff;
+    border-color: #28a745;
+}
+.nav-approved.active {
+    background-color: #28a745; /* Fica verde quando ativo */
+    color: #fff;
+}
+.nav-approved.active .count {
+    color: #fff;
+}
+
+/* Rejeitadas (Vermelho) */
+.nav-rejected {
+    background-color: #fff;
+    border-color: #d9534f;
+}
+.nav-rejected.active {
+    background-color: #d9534f; /* Fica vermelho quando ativo */
+    color: #fff;
+}
+.nav-rejected.active .count {
+    color: #fff;
+}
+
+/* --- ESTILOS PARA O FORMULÁRIO DE NOVA SOLICITAÇÃO --- */
+
+.new-request-form {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para o botão cancelar */
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header h3 {
+    margin-bottom: 5px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+.cancel-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+.cancel-btn:hover {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante padding não aumente a largura */
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+/* Para colocar Início e Fim lado a lado */
+.inline-group {
+    display: flex;
+    gap: 15px; /* Espaço entre os campos */
+}
+.inline-group > div {
+    flex: 1; /* Faz cada div ocupar metade do espaço */
+}
+
+.form-actions {
+    text-align: right; /* Alinha o botão à direita */
+    margin-top: 30px;
+}
+
+.btn-next {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-next:hover {
+    background-color: #0056b3;
+}
+
+/* Ajusta o botão ativo de criar */
+.create-btn.active {
+     background-color: #0b5ed7; /* Tom mais escuro para indicar ativo */
+     border: 2px solid #0a58ca;
+}
+
+/* --- ESTILOS PARA A SELEÇÃO DE EQUIPE (PASSO 2) --- */
+
+.team-selection h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+.technician-list {
+    max-height: 250px; /* Limita a altura e adiciona scroll se necessário */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fdfdfd;
+}
+
+.technician-item {
+    display: block; /* Faz cada item ocupar uma linha */
+    margin-bottom: 12px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.technician-item:hover {
+    background-color: #f9f9f9;
+}
+
+.technician-item input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #007bff; /* Cor do checkbox (moderno) */
+}
+
+/* Para alinhar os botões Voltar e Enviar */
+.form-actions.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-back {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.btn-back:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-submit { /* Reutiliza estilo de botão, mas com cor verde talvez? */
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+/* --- ESTILOS PARA MENSAGENS DE FEEDBACK --- */
+
+.feedback-message {
+    padding: 15px;
+    margin-top: 20px; /* Espaço acima da mensagem */
+    margin-bottom: 20px; /* Espaço abaixo da mensagem */
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    display: none;
+}
+
+/* Estilo específico para Sucesso (Verde) */
+.success-message {
+    color: #155724; /* Verde escuro (texto) */
+    background-color: #d4edda; /* Verde claro (fundo) */
+    border-color: #c3e6cb; /* Verde (borda) */
+}
+
+.success-message strong {
+    font-weight: bold;
+}
+
+/* Estilo específico para Erro (Vermelho) */
+.error-message {
+    color: #721c24; /* Vermelho escuro (texto) */
+    background-color: #f8d7da; /* Vermelho claro (fundo) */
+    border-color: #f5c6cb; /* Vermelho (borda) */
+}
+
+.error-message strong {
+    font-weight: bold;
+}
+
+/* --- ESTILOS PARA LISTAGEM DE SOLICITAÇÕES (TABELA) --- */
+
+.request-list h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.requests-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre células */
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.requests-table thead {
+    background-color: #f8f9fa; /* Fundo cinza claro para cabeçalho */
+}
+
+.requests-table th,
+.requests-table td {
+    border: 1px solid #e0e0e0; /* Bordas cinzas claras */
+    padding: 12px 15px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento padrão à esquerda */
+    vertical-align: middle; /* Alinha verticalmente ao meio */
+}
+
+.requests-table th {
+    font-weight: bold;
+    color: #555;
+}
+
+.requests-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd; /* Cor levemente diferente para linhas pares */
+}
+
+.requests-table tbody tr:hover {
+    background-color: #f1f1f1; /* Efeito ao passar o mouse */
+}
+
+/* Estilos para os botões de Ação na tabela */
+.action-btn {
+    display: inline-block;
+    padding: 6px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+.action-btn.approve {
+    background-color: #28a745; /* Verde */
+}
+
+.action-btn.reject {
+    background-color: #dc3545; /* Vermelho */
+}
+
+.action-btn.details {
+    background-color: #6c757d; /* Cinza */
+}
+
+.sidebar-nav-manager a {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.sidebar-nav-manager .count {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Aprovadas (Verde) - Estilo base e ativo */
+.nav-approved { 
+    background-color: #fff; 
+    border-color: #28a745; 
+}
+/* Esta regra é aplicada quando a classe 'active' está no link Aprovadas */
+.nav-approved.active { 
+    background-color: #28a745; 
+    color: #fff; 
+}
+.nav-approved.active .count { 
+    color: #fff; 
+}
+
+
+/* --- LISTAGEM DE SOLICITAÇÕES (TABELA - Compartilhado) --- */
+.request-list h2 { 
+    margin-bottom: 25px; 
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #333; 
+}
+.requests-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+    font-size: 14px; 
+}
+.requests-table thead { 
+    background-color: #f8f9fa; 
+}
+.requests-table th,
+.requests-table td { 
+    border: 1px solid #e0e0e0; 
+    padding: 12px 15px; 
+    text-align: left; 
+    vertical-align: middle; 
+}
+.requests-table th { 
+    font-weight: bold; 
+    color: #555; 
+}
+.requests-table tbody tr:nth-child(even) { 
+    background-color: #fdfdfd; 
+}
+.requests-table tbody tr:hover { 
+    background-color: #f1f1f1; 
+}
+
+/* Estilo base do botão de ação (compartilhado) */
+.action-btn { 
+    display: inline-block; 
+    padding: 6px 10px; 
+    margin-right: 5px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-size: 12px; 
+    color: #fff; 
+    border: none; 
+    cursor: pointer; 
+    transition: opacity 0.3s; 
+}
+.action-btn:hover { 
+    opacity: 0.8; 
+}
+
+/* Estilo do botão Detalhes (Cinza - Compartilhado) */
+.action-btn.details { 
+    background-color: #6c757d; 
+}
