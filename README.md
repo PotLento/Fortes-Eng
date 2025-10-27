@@ -53,14 +53,14 @@ Este é um projeto puramente front-end. Para visualizá-lo:
 
 ## Tecnologias Utilizadas
 
-* [cite_start]**HTML5:** Estruturação do conteúdo [cite: 1146-1151].
-* [cite_start]**CSS3:** Estilização visual (layouts, cores, fontes) [cite: 18, 1715-1717]. Foram usados arquivos CSS separados por módulo/função. [cite_start]Conceitos como Flexbox foram aplicados para layout[cite: 153].
+* **HTML5:** Estruturação do conteúdo.
+* **CSS3:** Estilização visual (layouts, cores, fontes). Foram usados arquivos CSS separados por módulo/função. Conceitos como Flexbox foram aplicados para layout.
 * **JavaScript (ES6 Básico):** Para simulação de feedback interativo nas telas de criação de solicitação (Encarregado) e análise (Gestor).
-* [cite_start]**Bootstrap 5 (Parcial):** Utilizado na refatoração do Painel do Gestor para aplicar conceitos de Grid Responsivo [cite: 580-587, 1988-1991] [cite_start]e Componentes [cite: 588, 606, 610, 3180] (introduzido nas aulas).
+* **Bootstrap 5 (Parcial):** Utilizado na refatoração do Painel do Gestor para aplicar conceitos de Grid Responsivo e Componentes (introduzido nas aulas).
 
 ## Autor
 
-* [Luiz Felipe Monteiro]
+* [Seu Nome Completo]
 
 ## Status do Projeto
 
