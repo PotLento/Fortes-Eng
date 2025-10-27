@@ -66,7 +66,7 @@ Este é um projeto puramente front-end. Para visualizá-lo:
 
 * Protótipo Front-End Funcional - Concluído (interfaces principais).
 
-## Próximos Passos / Melhorias Futuras (Sugestões)
+## Próximos Passos / Melhorias Futuras
 
 * Implementação do Back-End (ex: PHP, Node.js, Python/Django) para processar logins, salvar e recuperar dados.
 * Integração com um Banco de Dados (ex: MySQL, PostgreSQL) para persistir as informações.
