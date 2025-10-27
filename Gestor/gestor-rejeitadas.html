@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Rejeições - Painel do Gestor</title>
+    <link rel="stylesheet" href="painel-gestor.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</head>
+<body class="panel-page"> <div class="panel-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h1>FORTES ENGENHARIA</h1>
+            </div>
+
+            <nav class="sidebar-nav-gestor">
+                <a href="#" class="nav-cost-center">Centro de Custos</a> 
+                
+                <a href="painel-gestor.html" class="nav-pending"> 
+                    <span>Solicitações Pendentes</span> 
+                    <span class="count">[XX]</span> 
+                </a>
+                 <a href="gestor-analise.html" class="view-request-btn">[ Ver Solicitação Agora ]</a>
+
+                <a href="gestor-aprovadas.html" class="nav-approved"> 
+                    <span>Histórico Aprovações</span>
+                    <span class="count">[YY]</span>
+                </a>
+                <a href="gestor-rejeitadas.html" class="nav-rejected active"> 
+                    <span>Histórico Rejeições</span>
+                    <span class="count">[ZZ]</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <p>Olá, Gestor (nome_gestor)</p>
+                <a href="login-gestor.html" class="logout-btn">Sair</a>
+            </header>
+
+            <section class="request-list">
+                <h2>Histórico de Solicitações Rejeitadas</h2>
+
+                <table class="requests-table">
+                    <thead>
+                        <tr>
+                            <th>Data Rejeição</th> 
+                            <th>Encarregado</th>
+                            <th>Técnico(s)</th>
+                            <th>Data / Hora Extra</th>
+                            <th>Motivo Rejeição</th> 
+                            <th>Ações</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20/10/2025</td> 
+                            <td>Nome_Encarregado_A</td>
+                            <td>Nome_Tecnico G</td>
+                            <td>15/11/2025 - 08:00 às 10:00</td>
+                            <td>Fora do escopo / Orçamento</td> 
+                            <td>
+                                <a href="#" class="action-btn details">Detalhes</a> 
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>18/10/2025</td> 
+                            <td>Nome_Encarregado_B</td>
+                            <td>Nome_Tecnico H, Nome_Tecnico I</td>
+                            <td>12/11/2025 - 20:00 às 22:00</td>
+                            <td>Justificativa incompleta</td> 
+                            <td>
+                                <a href="#" class="action-btn details">Detalhes</a> 
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Gestor - Início</title>
+    <link rel="stylesheet" href="painel-gestor.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</head>
+<body class="panel-page"> 
+    <div class="panel-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h1>FORTES ENGENHARIA</h1>
+            </div>
+            
+            <nav class="sidebar-nav-gestor">
+                <a href="#" class="nav-cost-center">Centro de Custos</a>
+                
+                <a href="painel-gestor.html" class="nav-pending active"> 
+                    <span>[1] SOLICITAÇÃO AGUARDANDO</span> 
+                    <span class="arrow">^</span> 
+                </a>
+                <a href="gestor-analise.html" class="view-request-btn">[ Ver Solicitação Agora ]</a>
+
+                <a href="gestor-aprovadas.html" class="nav-approved"> 
+                    <span>Histórico Aprovações</span>
+                    <span class="count">[YY]</span>
+                </a>
+                <a href="gestor-rejeitadas.html" class="nav-rejected"> 
+                    <span>Histórico Rejeições</span>
+                    <span class="count">[ZZ]</span>
+                </a>
+            </nav>
+            </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <p>Olá, Gestor (nome_gestor)</p>
+                <a href="login-gestor.html" class="logout-btn">Sair</a>
+            </header>
+
+            <section class="summary-section">
+                <div class="summary-box">
+                    <p>Custo Total no Mês</p>
+                    <p class="value">R$ 7.850,00</p>
+                    <hr>
+                    <p>Total de Horas Aprovadas</p>
+                    <p class="value-small">145 horas</p>
+                    <hr>
+                    <p>Custo Médio por Hora</p>
+                    <p class="value-small">R$ 54,13</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    </body>
+</html>

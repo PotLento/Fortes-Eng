@@ -1,0 +1,112 @@
+/* --- ESTILOS PARA TODAS AS PÁGINAS DO PAINEL DO GESTOR --- */
+
+/* --- ESTILOS GERAIS DO PAINEL --- */
+body { /* Estilo geral para o body do painel */
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff; 
+}
+.panel-container { 
+    display: flex; 
+    width: 100%; 
+    min-height: 100vh; 
+}
+
+/* --- ESTILOS DA BARRA LATERAL (Sidebar) --- */
+.sidebar { 
+    width: 250px; 
+    background-color: #f8f9fa; 
+    border-right: 1px solid #e0e0e0; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+}
+.sidebar .sidebar-logo { 
+    position: static; 
+    border: 1px solid #333; 
+    padding: 10px; 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+.sidebar .sidebar-logo h1 { 
+    font-size: 18px; 
+    font-weight: normal; 
+    color: #333; 
+    margin: 0; 
+}
+
+/* --- NAVEGAÇÃO DO GESTOR --- */
+.sidebar-nav-gestor a {
+    display: block; padding: 15px; margin-bottom: 10px; text-decoration: none; color: #333;
+    border: 1px solid #ccc; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; position: relative;
+}
+.sidebar-nav-gestor a:hover { background-color: #e9ecef; }
+/* Link normal (Centro de Custos) */
+.nav-cost-center { background-color: #fff; border-color: #ccc; }
+/* Link Pendentes (Amarelo) */
+.nav-pending { background-color: #fff; border-color: #ffc107; display: flex; justify-content: space-between; align-items: center; }
+.nav-pending.active { background-color: #ffc107; color: #000; }
+.nav-pending .arrow { font-size: 12px; }
+/* Botão "Ver Solicitação Agora" */
+.view-request-btn { background-color: #fff; border: 1px solid #6c757d; color: #6c757d; text-align: center; font-size: 14px; padding: 10px; margin-top: -5px; margin-bottom: 20px;} /* Ajustes margem */
+.view-request-btn:hover { background-color: #f1f1f1; }
+/* Links Histórico */
+.sidebar-nav-gestor .count { font-weight: normal; color: #555; margin-left: auto; padding-left: 10px; } 
+.nav-approved { background-color: #fff; border-color: #28a745; display: flex; justify-content: space-between; align-items: center; }
+.nav-approved.active { background-color: #28a745; color: #fff; }
+.nav-approved.active .count { color: #fff; }
+.nav-rejected { background-color: #fff; border-color: #d9534f; display: flex; justify-content: space-between; align-items: center; }
+.nav-rejected.active { background-color: #d9534f; color: #fff; }
+.nav-rejected.active .count { color: #fff; }
+
+
+/* --- ESTILOS DO CONTEÚDO PRINCIPAL (Main Content) --- */
+.main-content { flex-grow: 1; padding: 30px; background-color: #fff; }
+.main-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.logout-btn { text-decoration: none; color: #d9534f; font-weight: bold; border: 1px solid #d9534f; padding: 8px 15px; border-radius: 5px; transition: all 0.3s; }
+.logout-btn:hover { background-color: #d9534f; color: #fff; }
+
+/* --- SEÇÃO DE RESUMO FINANCEIRO (painel-gestor.html) --- */
+.summary-section { display: flex; justify-content: center; margin-top: 40px; }
+.summary-box { border: 1px solid #ccc; padding: 30px; border-radius: 8px; width: 100%; max-width: 400px; text-align: center; background-color: #f8f9fa; }
+.summary-box p { margin: 10px 0; color: #555; }
+.summary-box .value { font-size: 24px; font-weight: bold; color: #333; margin-bottom: 15px; }
+.summary-box .value-small { font-size: 18px; font-weight: bold; color: #333; margin-bottom: 15px; }
+.summary-box hr { border: 0; border-top: 1px solid #e0e0e0; margin: 15px 0; }
+
+/* --- ESTILOS PARA LISTAGEM/ANÁLISE (Tabelas e Detalhes) --- */
+.request-list h2, .analysis-section h2 { margin-bottom: 25px; font-size: 20px; font-weight: bold; color: #333; text-align: center; }
+/* Estilos da Tabela */
+.requests-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+.requests-table thead { background-color: #f8f9fa; }
+.requests-table th, .requests-table td { border: 1px solid #e0e0e0; padding: 12px 15px; text-align: left; vertical-align: middle; }
+.requests-table th { font-weight: bold; color: #555; }
+.requests-table tbody tr:nth-child(even) { background-color: #fdfdfd; }
+.requests-table tbody tr:hover { background-color: #f1f1f1; }
+/* Botões de Ação na Tabela/Análise */
+.action-btn { display: inline-block; padding: 6px 10px; margin-right: 5px; border-radius: 4px; text-decoration: none; font-size: 12px; color: #fff; border: none; cursor: pointer; transition: opacity 0.3s; }
+.action-btn:hover { opacity: 0.8; }
+.action-btn.approve { background-color: #28a745; }
+.action-btn.reject { background-color: #dc3545; }
+.action-btn.details { background-color: #6c757d; }
+
+/* --- ESTILOS PARA A PÁGINA DE ANÁLISE (gestor-analise.html) --- */
+.analysis-box { background-color: #fdfdfd; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px 30px; margin-bottom: 30px; }
+.analysis-box p, .analysis-box ul li { margin-bottom: 10px; color: #333; line-height: 1.6; }
+.analysis-box strong { color: #000; }
+.analysis-box ul { list-style: none; padding-left: 15px; margin-top: 5px; }
+.analysis-box hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+/* Badges de Status */
+.status-badge { display: inline-block; padding: 8px 15px; border-radius: 5px; color: #fff; font-weight: bold; font-size: 14px; margin: 10px 0; }
+.status-badge.rejected { background-color: #dc3545; }
+.status-badge.approved { background-color: #28a745; }
+/* Contêiner para os botões Rejeitar/Aprovar na Análise */
+.analysis-actions { margin-top: 25px; text-align: right; }
+.analysis-actions .action-btn { padding: 10px 20px; font-size: 14px; margin-left: 10px; }
+/* Mensagem "Não há solicitações" */
+.no-requests-message { border: 2px dashed #ccc; padding: 40px; text-align: center; margin-top: 40px; display: none; /* Começa escondido */ }
+.no-requests-message h2 { color: #888; font-weight: bold; }
+
+/* --- FIM DOS ESTILOS DO PAINEL DO GESTOR --- */
