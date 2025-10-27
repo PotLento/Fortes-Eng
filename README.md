@@ -38,40 +38,4 @@ O sistema simula as interfaces e fluxos de navegação para três perfis de usu�
 
 ## Estrutura do Projeto
 
-O projeto está organizado em pastas (ou prefixos de arquivo) para cada perfil principal:
-
-/ (Raiz do Projeto) |-- Técnico/ | |-- login-tecnico.html | |-- painel-tecnico.html | |-- historico.html | |-- ajuda-tecnico.html | |-- painel.css | |-- style-login.css |-- Encarregado/ | |-- login-encarregado.html | |-- painel-encarregado.html | |-- encarregado-criar-1.html | |-- encarregado-criar-2.html | |-- encarregado-pendentes.html | |-- encarregado-aprovadas.html | |-- encarregado-rejeitadas.html | |-- login-encarregado.css | |-- style-encarregado.css | |-- encarregado-scripts.js |-- Gestor/ | |-- login-gestor.html | |-- painel-gestor.html | |-- gestor-analise.html | |-- gestor-aprovadas.html | |-- gestor-rejeitadas.html | |-- style-gestor.css | |-- painel-gestor.css | |-- gestor-scripts.js |-- recuperar-senha.html |-- senha.css |-- README.md
-
-*(Ajuste a estrutura acima para refletir exatamente seus arquivos e pastas)*
-
-## Como Executar
-
-Este é um projeto puramente front-end. Para visualizá-lo:
-1.  Clone ou baixe o repositório.
-2.  Abra qualquer um dos arquivos `.html` (recomendado começar pelos de login, como `login-tecnico.html`, `login-encarregado.html` ou `login-gestor.html`) diretamente em um navegador web moderno (Chrome, Firefox, Edge, etc.).
-3.  Navegue pelas telas utilizando os links e botões.
-
-## Tecnologias Utilizadas
-
-* **HTML5:** Estruturação do conteúdo.
-* **CSS3:** Estilização visual (layouts, cores, fontes). Foram usados arquivos CSS separados por módulo/função.
-* **JavaScript (ES6 Básico):** Para simulação de feedback interativo nas telas de criação de solicitação (Encarregado) e análise (Gestor).
-* [cite_start]**Bootstrap 5 (Parcial):** Utilizado na refatoração do Painel do Gestor para aplicar conceitos de Grid Responsivo e Componentes (introduzido nas aulas [cite: 1199-1200]).
-
-## Autor
-
-* [Luiz Felipe Monteiro Correia]
-
-## Status do Projeto
-
-* Protótipo Front-End Funcional - Concluído (interfaces principais).
-
-## Próximos Passos / Melhorias Futuras (Sugestões)
-
-* Implementação do Back-End (ex: PHP, Node.js, Python/Django) para processar logins, salvar e recuperar dados.
-* Integração com um Banco de Dados (ex: MySQL, PostgreSQL) para persistir as informações.
-* Validação completa dos formulários com JavaScript.
-* Implementação de autenticação e sessões de usuário seguras.
-* Refatoração completa para usar Bootstrap 5 em todo o projeto.
-* Desenvolvimento das funcionalidades "Centro de Custos" e "Detalhes da Solicitação".
-* Melhoria da responsividade em todas as telas.
+O projeto está organizado com arquivos HTML e CSS separados por perfil:
