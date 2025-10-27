@@ -60,7 +60,7 @@ Este é um projeto puramente front-end. Para visualizá-lo:
 
 ## Autor
 
-* [Seu Nome Completo]
+* [Luiz Felipe Monteiro]
 
 ## Status do Projeto
 
