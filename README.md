@@ -68,8 +68,8 @@ Este é um projeto puramente front-end. Para visualizá-lo:
 
 ## Próximos Passos / Melhorias Futuras
 
-* Implementação do Back-End (ex: PHP, Node.js, Python/Django) para processar logins, salvar e recuperar dados.
-* Integração com um Banco de Dados (ex: MySQL, PostgreSQL) para persistir as informações.
+* Implementação do Back-End (Node.js, Django) para processar logins, salvar e recuperar dados.
+* Integração com um Banco de Dados (MySQL, SQLServer) para persistir as informações.
 * Validação completa dos formulários com JavaScript.
 * Implementação de autenticação e sessões de usuário seguras.
 * Refatoração completa para usar Bootstrap 5 em todo o projeto (opcional).
